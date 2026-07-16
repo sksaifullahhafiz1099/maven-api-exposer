@@ -12,6 +12,8 @@ interface DocumentItem {
   createdAt?: string;
 }
 
+const API_URL = 'https://admin.mavenpromo.com/api/external/documents';
+
 export default function ExternalPortalPage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [email, setEmail] = useState('');
@@ -42,7 +44,7 @@ export default function ExternalPortalPage() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('http://localhost:3000/api/external/documents', {
+      const res = await fetch(API_URL, {
         headers: {
           'X-Admin-Username': userEmail,
           'X-Admin-Password': userPass,
@@ -67,7 +69,7 @@ export default function ExternalPortalPage() {
     if (!formTitle.trim()) return;
     setSubmitting(true);
     try {
-      const res = await fetch('http://localhost:3000/api/external/documents', {
+      const res = await fetch(API_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -85,7 +87,7 @@ export default function ExternalPortalPage() {
       });
       const data = await res.json();
       if (!res.ok || !data.success) throw new Error(data.error || 'Failed to add document');
-      
+
       setFormTitle('');
       setFormDescription('');
       setIsDialogOpen(false);
