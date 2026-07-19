@@ -4,16 +4,6 @@ import React, { useState, useEffect, useRef } from 'react';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
-interface DocumentItem {
-  id: string;
-  title: string;
-  category: string;
-  description: string;
-  status: string;
-  author: string;
-  createdAt?: string;
-}
-
 interface SageProduct {
   id: string;
   name?: string;
@@ -27,8 +17,11 @@ interface SageProduct {
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
-const DOCS_API_URL = 'http://localhost:3000/api/external/documents';
-const SAGE_API_URL = 'http://localhost:3000/api/external/sage-products';
+const ADMIN_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://admin.mavenpromo.com' 
+  : 'http://localhost:3000';
+
+const SAGE_API_URL = `${ADMIN_URL}/api/external/sage-products`;
 
 // ─── Main Component ──────────────────────────────────────────────────────────
 
@@ -39,18 +32,8 @@ export default function ExternalPortalPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Active main tab: 'DOCUMENTS' or 'SAGE'
-  const [mainTab, setMainTab] = useState<'DOCUMENTS' | 'SAGE'>('DOCUMENTS');
+  // ── Sage state ────────────────────────────────────────────────────────────
 
-  // ── Documents tab state ───────────────────────────────────────────────────
-  const [documents, setDocuments] = useState<DocumentItem[]>([]);
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [formTitle, setFormTitle] = useState('');
-  const [formCategory, setFormCategory] = useState('API Spec');
-  const [formDescription, setFormDescription] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-
-  // ── Sage tab state ────────────────────────────────────────────────────────
   const [sageFile, setSageFile] = useState<File | null>(null);
   const [sageFileName, setSageFileName] = useState('');
   const sageFileInputRef = useRef<HTMLInputElement>(null);
@@ -76,59 +59,6 @@ export default function ExternalPortalPage() {
     'X-Admin-Password': password,
     'Authorization': `Basic ${btoa(`${email}:${password}`)}`,
   });
-
-  // ── Documents API ─────────────────────────────────────────────────────────
-  const fetchDocuments = async (userEmail = email, userPass = password) => {
-    setLoading(true);
-    setError(null);
-    try {
-      const res = await fetch(DOCS_API_URL, {
-        headers: {
-          'X-Admin-Username': userEmail,
-          'X-Admin-Password': userPass,
-          'Authorization': `Basic ${btoa(`${userEmail}:${userPass}`)}`,
-        },
-      });
-      const data = await res.json();
-      if (!res.ok || !data.success) throw new Error(data.error || 'Failed to authenticate');
-      setDocuments(data.documents || []);
-      return true;
-    } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : 'Error connecting to API');
-      return false;
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const insertDocument = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formTitle.trim()) return;
-    setSubmitting(true);
-    try {
-      const res = await fetch(DOCS_API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', ...authHeaders() },
-        body: JSON.stringify({
-          title: formTitle,
-          category: formCategory,
-          description: formDescription,
-          status: 'Published',
-          author: email.split('@')[0],
-        }),
-      });
-      const data = await res.json();
-      if (!res.ok || !data.success) throw new Error(data.error || 'Failed to add document');
-      setFormTitle('');
-      setFormDescription('');
-      setIsDialogOpen(false);
-      await fetchDocuments();
-    } catch (err: unknown) {
-      alert(err instanceof Error ? err.message : 'Error creating document');
-    } finally {
-      setSubmitting(false);
-    }
-  };
 
   // ── Sage API ──────────────────────────────────────────────────────────────
   const sageLog = (msg: string, type: 'info' | 'success' | 'error' | 'warn' = 'info') => {
@@ -198,11 +128,27 @@ export default function ExternalPortalPage() {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !password) return;
-    const success = await fetchDocuments(email, password);
-    if (success) {
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch(SAGE_API_URL, {
+        headers: {
+          'X-Admin-Username': email,
+          'X-Admin-Password': password,
+          'Authorization': `Basic ${btoa(`${email}:${password}`)}`,
+        },
+      });
+      const data = await res.json();
+      if (!res.ok || !data.success) throw new Error(data.error || 'Invalid credentials');
+      
       setIsLoggedIn(true);
       localStorage.setItem('maven_user', email);
       localStorage.setItem('maven_pass', password);
+      setSageProducts(data.products || []);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'Login failed');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -211,13 +157,13 @@ export default function ExternalPortalPage() {
     localStorage.removeItem('maven_pass');
   };
 
-  // ── On tab switch to SAGE, load list ──────────────────────────────────────
+  // ── On login, load list ───────────────────────────────────────────────────
   useEffect(() => {
-    if (mainTab === 'SAGE' && isLoggedIn) {
+    if (isLoggedIn) {
       fetchSageProducts();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mainTab, isLoggedIn]);
+  }, [isLoggedIn]);
 
   // ── LOGIN VIEW ────────────────────────────────────────────────────────────
   if (!isLoggedIn) {
@@ -284,40 +230,13 @@ export default function ExternalPortalPage() {
           </div>
 
           <div className="flex items-center gap-2">
-            {/* Main tab switcher */}
-            <div className="flex items-center bg-zinc-100 border border-zinc-200 rounded-lg p-0.5 gap-0.5 mr-2">
-              <button
-                onClick={() => setMainTab('DOCUMENTS')}
-                className={`px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${mainTab === 'DOCUMENTS'
-                  ? 'bg-white text-zinc-900 shadow-sm'
-                  : 'text-zinc-500 hover:text-zinc-700'
-                  }`}
-              >
-                External Documents
-              </button>
-              <button
-                onClick={() => setMainTab('SAGE')}
-                className={`px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${mainTab === 'SAGE'
-                  ? 'bg-emerald-600 text-white shadow-sm'
-                  : 'text-zinc-500 hover:text-zinc-700'
-                  }`}
-              >
-                Sage Products
-              </button>
-            </div>
-
-            {mainTab === 'DOCUMENTS' && (
-              <button
-                onClick={() => setIsDialogOpen(true)}
-                className="h-8 rounded-md bg-zinc-900 px-3.5 text-xs font-medium text-white shadow hover:bg-zinc-800 transition-colors inline-flex items-center gap-1.5"
-              >
-                <span>+ Add Document</span>
-              </button>
-            )}
+            <span className="text-xs font-semibold bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-md">
+              Sage Products
+            </span>
 
             <button
               onClick={handleSignOut}
-              className="h-8 rounded-md border border-zinc-200 bg-white px-3 text-xs font-medium text-zinc-700 shadow-sm hover:bg-zinc-100 transition-colors"
+              className="h-8 rounded-md border border-zinc-200 bg-white px-3 text-xs font-medium text-zinc-700 shadow-sm hover:bg-zinc-100 transition-colors ml-2"
             >
               Sign Out
             </button>
@@ -325,62 +244,8 @@ export default function ExternalPortalPage() {
         </div>
       </header>
 
-      {/* ─── DOCUMENTS TAB ─────────────────────────────────────────────── */}
-      {mainTab === 'DOCUMENTS' && (
-        <main className="mx-auto max-w-5xl px-6 py-8">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="text-sm font-semibold text-zinc-950">External Documents</span>
-            <span className="rounded-full bg-zinc-100 px-2.5 py-0.5 text-xs font-medium text-zinc-600">
-              {documents.length} items
-            </span>
-          </div>
-          <div className="rounded-lg border border-zinc-200 bg-white shadow-sm overflow-hidden">
-            {documents.length === 0 ? (
-              <div className="py-12 text-center text-xs text-zinc-500">
-                No documents found. Click &quot;Add Document&quot; to insert one.
-              </div>
-            ) : (
-              <table className="w-full text-left text-sm">
-                <thead className="border-b border-zinc-200 bg-zinc-50/50 text-xs font-medium text-zinc-500">
-                  <tr>
-                    <th className="px-6 py-3">Title</th>
-                    <th className="px-6 py-3">Category</th>
-                    <th className="px-6 py-3">Status</th>
-                    <th className="px-6 py-3">Author</th>
-                    <th className="px-6 py-3">Created</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-zinc-200 text-zinc-900">
-                  {documents.map((doc) => (
-                    <tr key={doc.id} className="hover:bg-zinc-50/60 transition-colors">
-                      <td className="px-6 py-3.5 font-medium">
-                        <div>{doc.title}</div>
-                        {doc.description && (
-                          <div className="text-xs text-zinc-500 font-normal mt-0.5 line-clamp-1">{doc.description}</div>
-                        )}
-                      </td>
-                      <td className="px-6 py-3.5">
-                        <span className="inline-flex items-center rounded-md bg-zinc-100 px-2 py-0.5 text-xs font-medium text-zinc-800">
-                          {doc.category}
-                        </span>
-                      </td>
-                      <td className="px-6 py-3.5 text-xs text-zinc-600">{doc.status || 'Published'}</td>
-                      <td className="px-6 py-3.5 text-xs text-zinc-600">{doc.author || 'Admin'}</td>
-                      <td className="px-6 py-3.5 text-xs text-zinc-500">
-                        {doc.createdAt ? new Date(doc.createdAt).toLocaleDateString() : 'Recently'}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            )}
-          </div>
-        </main>
-      )}
-
       {/* ─── SAGE PRODUCTS TAB ─────────────────────────────────────────── */}
-      {mainTab === 'SAGE' && (
-        <main className="mx-auto max-w-5xl px-6 py-8 space-y-6">
+      <main className="mx-auto max-w-5xl px-6 py-8 space-y-6">
 
           {/* Upload Card */}
           <div className="rounded-lg border border-zinc-200 bg-white shadow-sm p-6 space-y-4">
@@ -585,75 +450,6 @@ export default function ExternalPortalPage() {
             )}
           </div>
         </main>
-      )}
-
-      {/* ─── DIALOG (Documents) ──────────────────────────────────────────── */}
-      {isDialogOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4 backdrop-blur-xs animate-fade-in">
-          <div className="w-full max-w-md rounded-lg border border-zinc-200 bg-white p-6 shadow-lg">
-            <h2 className="text-base font-semibold text-zinc-950">Add Document</h2>
-            <p className="text-xs text-zinc-500 mt-0.5 mb-4">
-              Insert a new document directly into the external collection.
-            </p>
-
-            <form onSubmit={insertDocument} className="space-y-4">
-              <div className="space-y-1.5">
-                <label className="text-xs font-medium text-zinc-700">Title</label>
-                <input
-                  type="text"
-                  required
-                  value={formTitle}
-                  onChange={(e) => setFormTitle(e.target.value)}
-                  placeholder="e.g. API Architecture v2"
-                  className="h-9 w-full rounded-md border border-zinc-200 bg-transparent px-3 py-1 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950"
-                />
-              </div>
-
-              <div className="space-y-1.5">
-                <label className="text-xs font-medium text-zinc-700">Category</label>
-                <select
-                  value={formCategory}
-                  onChange={(e) => setFormCategory(e.target.value)}
-                  className="h-9 w-full rounded-md border border-zinc-200 bg-white px-3 py-1 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950"
-                >
-                  <option value="API Spec">API Spec</option>
-                  <option value="Protocol">Protocol</option>
-                  <option value="Release Note">Release Note</option>
-                  <option value="Guide">Guide</option>
-                </select>
-              </div>
-
-              <div className="space-y-1.5">
-                <label className="text-xs font-medium text-zinc-700">Description</label>
-                <textarea
-                  rows={3}
-                  value={formDescription}
-                  onChange={(e) => setFormDescription(e.target.value)}
-                  placeholder="Brief summary of document..."
-                  className="w-full rounded-md border border-zinc-200 bg-transparent px-3 py-2 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 resize-none"
-                />
-              </div>
-
-              <div className="flex justify-end gap-2 pt-2">
-                <button
-                  type="button"
-                  onClick={() => setIsDialogOpen(false)}
-                  className="h-8 rounded-md border border-zinc-200 px-3 text-xs font-medium text-zinc-700 hover:bg-zinc-100"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="h-8 rounded-md bg-zinc-900 px-3 text-xs font-medium text-white shadow hover:bg-zinc-800 disabled:opacity-50"
-                >
-                  {submitting ? 'Saving...' : 'Save Document'}
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
