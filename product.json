@@ -1,0 +1,417 @@
+{
+  "ok": true,
+  "provider": "sage-connect",
+  "requestSummary": {
+    "sageEnvironment": "production",
+    "serviceId": 108,
+    "apiVer": 130,
+    "sageNum": 53869,
+    "productId": 9500663,
+    "productCount": 1
+  },
+  "result": {
+    "errNum": null,
+    "errMsg": "",
+    "products": [
+      {
+        "productId": 9500663,
+        "suppId": 53869,
+        "itemNum": "500339",
+        "name": "Clear PVC Crossbody Belt Bag",
+        "cat1Id": 360,
+        "cat1Name": "Fanny Packs",
+        "cat2Id": 0,
+        "cat2Name": "",
+        "page1": "",
+        "page2": "",
+        "description": "This Clear PVC Crossbody Belt Bag is constructed from 25C clear PVC, offering style and functionality for hands-free convenience. Its transparent design allows easy visibility of contents, making it ideal for stadiums, concerts, events, and daily use. Available in various colors including Red, Black, Blue, Gray, and White, it can be customized with single-color screen printing to promote your brand effectively.",
+        "keywords": "Clear Fanny Pack, Fanny Pack, Fanny Pack Belt, Running Bag, Crossbody Fanny Pack, Sports Bag, Clear Fanny Pack, Stadium Approved Fanny Pack, Clear Bag, Custom Fanny Pack, Printed Fanny Pack",
+        "colors": "PVC Transparent, Red, Black, Blue, Gray, White",
+        "themes": "Beach, Biking, Camping, Fashion, Vacation",
+        "sizes": [
+          {
+            "val": "8",
+            "units": 1,
+            "type": 1
+          },
+          {
+            "val": "6",
+            "units": 1,
+            "type": 3
+          },
+          {
+            "val": "2.5",
+            "units": 1,
+            "type": 2
+          }
+        ],
+        "quantities": [
+          50,
+          100,
+          250,
+          500,
+          1000,
+          2500
+        ],
+        "prices": [
+          10.6,
+          9.36,
+          8.74,
+          8.62,
+          8.51,
+          8.46
+        ],
+        "prCode": "RRRRRR",
+        "piecesPerUnit": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "piecePrices": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quoteUponRequest": 0,
+        "priceIncludesClr": "",
+        "priceIncludesSide": "",
+        "priceIncludesLoc": "",
+        "options": [],
+        "additionalCharges": {
+          "setupChg": 48,
+          "setupChgCode": "V",
+          "screenChg": 0,
+          "screenChgCode": "",
+          "plateChg": 0,
+          "plateChgCode": "",
+          "dieChg": 0,
+          "dieChgCode": "",
+          "toolingChg": 0,
+          "toolingChgCode": "",
+          "repeatChg": 48,
+          "repeatChgCode": "V",
+          "addClrChg": 0,
+          "addClrChgCode": "",
+          "addClrRunChgs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "addClrRunChgCode": ""
+        },
+        "isRecyclable": 0,
+        "isEnvironmentallyFriendly": 0,
+        "isNewProd": 0,
+        "showEndUsers": 1,
+        "exclusive": 0,
+        "premium": 0,
+        "notSuitable": 0,
+        "isFood": 0,
+        "isClothing": 0,
+        "hazardous": 0,
+        "officiallyLicensed": 0,
+        "imprintArea": [
+          {
+            "val": "",
+            "units": 0,
+            "type": 0
+          },
+          {
+            "val": "",
+            "units": 0,
+            "type": 0
+          }
+        ],
+        "imprintLoc": "",
+        "secondImprintArea": [
+          {
+            "val": "",
+            "units": 0,
+            "type": 0
+          },
+          {
+            "val": "",
+            "units": 0,
+            "type": 0
+          }
+        ],
+        "secondImprintLoc": "",
+        "decorationMethod": "Screen printed",
+        "noDecoration": 0,
+        "noDecorationOffered": 0,
+        "pics": [
+          {
+            "index": 1,
+            "caption": "",
+            "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=779500663&RS=1800&I=1",
+            "hasLogo": 1
+          },
+          {
+            "index": 2,
+            "caption": "",
+            "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=779500663&RS=1800&I=2",
+            "hasLogo": 0
+          },
+          {
+            "index": 3,
+            "caption": "Image 3",
+            "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=779500663&RS=1800&I=3",
+            "hasLogo": 0
+          },
+          {
+            "index": 4,
+            "caption": "Image 4",
+            "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=779500663&RS=1800&I=4",
+            "hasLogo": 0
+          },
+          {
+            "index": 5,
+            "caption": "Image 5",
+            "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=779500663&RS=1800&I=5",
+            "hasLogo": 0
+          }
+        ],
+        "notPictured": 0,
+        "madeInCountry": "CN",
+        "assembledInCountry": "CN",
+        "decoratedInCountry": "CN",
+        "printOnDemand": 0,
+        "complianceList": "",
+        "warningLbl": "",
+        "complianceMemo": "",
+        "prodTimeLo": 7,
+        "prodTimeHi": 10,
+        "rushProdTimeLo": 3,
+        "rushProdTimeHi": 5,
+        "packaging": "Individually wrapped; 100 units/ctn; 25 lbs./ctn;",
+        "cartonL": "0",
+        "cartonW": "0",
+        "cartonH": "0",
+        "weightPerCtn": "0",
+        "unitsPerCtn": "0",
+        "shipPointCountry": "",
+        "shipPointZip": "",
+        "comment": "",
+        "supplierWebpage": "",
+        "verified": 1,
+        "catYear": 2026,
+        "expirationDate": "2026-12-31",
+        "lastUpdated": "2026-07-16T17:47:25Z",
+        "inventoryOnHand": "",
+        "inventoryLastUpdated": "",
+        "discontinued": 0
+      }
+    ]
+  },
+  "raw": {
+    "ok": true,
+    "products": [
+      {
+        "productId": 9500663,
+        "suppId": 53869,
+        "itemNum": "500339",
+        "name": "Clear PVC Crossbody Belt Bag",
+        "cat1Id": 360,
+        "cat1Name": "Fanny Packs",
+        "cat2Id": 0,
+        "cat2Name": "",
+        "page1": "",
+        "page2": "",
+        "description": "This Clear PVC Crossbody Belt Bag is constructed from 25C clear PVC, offering style and functionality for hands-free convenience. Its transparent design allows easy visibility of contents, making it ideal for stadiums, concerts, events, and daily use. Available in various colors including Red, Black, Blue, Gray, and White, it can be customized with single-color screen printing to promote your brand effectively.",
+        "keywords": "Clear Fanny Pack, Fanny Pack, Fanny Pack Belt, Running Bag, Crossbody Fanny Pack, Sports Bag, Clear Fanny Pack, Stadium Approved Fanny Pack, Clear Bag, Custom Fanny Pack, Printed Fanny Pack",
+        "colors": "PVC Transparent, Red, Black, Blue, Gray, White",
+        "themes": "Beach, Biking, Camping, Fashion, Vacation",
+        "sizes": [
+          {
+            "val": "8",
+            "units": 1,
+            "type": 1
+          },
+          {
+            "val": "6",
+            "units": 1,
+            "type": 3
+          },
+          {
+            "val": "2.5",
+            "units": 1,
+            "type": 2
+          }
+        ],
+        "quantities": [
+          50,
+          100,
+          250,
+          500,
+          1000,
+          2500
+        ],
+        "prices": [
+          10.6,
+          9.36,
+          8.74,
+          8.62,
+          8.51,
+          8.46
+        ],
+        "prCode": "RRRRRR",
+        "piecesPerUnit": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "piecePrices": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "quoteUponRequest": 0,
+        "priceIncludesClr": "",
+        "priceIncludesSide": "",
+        "priceIncludesLoc": "",
+        "options": [],
+        "additionalCharges": {
+          "setupChg": 48,
+          "setupChgCode": "V",
+          "screenChg": 0,
+          "screenChgCode": "",
+          "plateChg": 0,
+          "plateChgCode": "",
+          "dieChg": 0,
+          "dieChgCode": "",
+          "toolingChg": 0,
+          "toolingChgCode": "",
+          "repeatChg": 48,
+          "repeatChgCode": "V",
+          "addClrChg": 0,
+          "addClrChgCode": "",
+          "addClrRunChgs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "addClrRunChgCode": ""
+        },
+        "isRecyclable": 0,
+        "isEnvironmentallyFriendly": 0,
+        "isNewProd": 0,
+        "showEndUsers": 1,
+        "exclusive": 0,
+        "premium": 0,
+        "notSuitable": 0,
+        "isFood": 0,
+        "isClothing": 0,
+        "hazardous": 0,
+        "officiallyLicensed": 0,
+        "imprintArea": [
+          {
+            "val": "",
+            "units": 0,
+            "type": 0
+          },
+          {
+            "val": "",
+            "units": 0,
+            "type": 0
+          }
+        ],
+        "imprintLoc": "",
+        "secondImprintArea": [
+          {
+            "val": "",
+            "units": 0,
+            "type": 0
+          },
+          {
+            "val": "",
+            "units": 0,
+            "type": 0
+          }
+        ],
+        "secondImprintLoc": "",
+        "decorationMethod": "Screen printed",
+        "noDecoration": 0,
+        "noDecorationOffered": 0,
+        "pics": [
+          {
+            "index": 1,
+            "caption": "",
+            "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=779500663&RS=1800&I=1",
+            "hasLogo": 1
+          },
+          {
+            "index": 2,
+            "caption": "",
+            "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=779500663&RS=1800&I=2",
+            "hasLogo": 0
+          },
+          {
+            "index": 3,
+            "caption": "Image 3",
+            "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=779500663&RS=1800&I=3",
+            "hasLogo": 0
+          },
+          {
+            "index": 4,
+            "caption": "Image 4",
+            "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=779500663&RS=1800&I=4",
+            "hasLogo": 0
+          },
+          {
+            "index": 5,
+            "caption": "Image 5",
+            "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=779500663&RS=1800&I=5",
+            "hasLogo": 0
+          }
+        ],
+        "notPictured": 0,
+        "madeInCountry": "CN",
+        "assembledInCountry": "CN",
+        "decoratedInCountry": "CN",
+        "printOnDemand": 0,
+        "complianceList": "",
+        "warningLbl": "",
+        "complianceMemo": "",
+        "prodTimeLo": 7,
+        "prodTimeHi": 10,
+        "rushProdTimeLo": 3,
+        "rushProdTimeHi": 5,
+        "packaging": "Individually wrapped; 100 units/ctn; 25 lbs./ctn;",
+        "cartonL": "0",
+        "cartonW": "0",
+        "cartonH": "0",
+        "weightPerCtn": "0",
+        "unitsPerCtn": "0",
+        "shipPointCountry": "",
+        "shipPointZip": "",
+        "comment": "",
+        "supplierWebpage": "",
+        "verified": 1,
+        "catYear": 2026,
+        "expirationDate": "2026-12-31",
+        "lastUpdated": "2026-07-16T17:47:25Z",
+        "inventoryOnHand": "",
+        "inventoryLastUpdated": "",
+        "discontinued": 0
+      }
+    ]
+  }
+}
