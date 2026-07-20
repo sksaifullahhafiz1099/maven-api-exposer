@@ -42,6 +42,7 @@ export default function ExternalPortalPage() {
   const [sageProducts, setSageProducts] = useState<SageProduct[]>([]);
   const [sageLoadingList, setSageLoadingList] = useState(false);
   const [sageListError, setSageListError] = useState<string | null>(null);
+  const [latestSuccessJson, setLatestSuccessJson] = useState<any>(null);
 
   // ── Load saved session ────────────────────────────────────────────────────
   useEffect(() => {
@@ -116,6 +117,7 @@ export default function ExternalPortalPage() {
       setSageFile(null);
       setSageFileName('');
       if (sageFileInputRef.current) sageFileInputRef.current.value = '';
+      setLatestSuccessJson(data);
       await fetchSageProducts();
     } catch (err: unknown) {
       sageLog(`✗ ${err instanceof Error ? err.message : String(err)}`, 'error');
@@ -360,6 +362,24 @@ export default function ExternalPortalPage() {
             </div>
           )}
         </div>
+
+        {/* Latest Success JSON Response */}
+        {latestSuccessJson && (
+          <div className="rounded-lg border border-zinc-200 bg-white shadow-sm p-6 space-y-3">
+            <div className="flex items-center justify-between">
+              <h3 className="text-sm font-semibold text-zinc-950">Latest API Response JSON</h3>
+              <button
+                onClick={() => setLatestSuccessJson(null)}
+                className="text-xs text-zinc-500 hover:text-zinc-700 font-medium"
+              >
+                Clear
+              </button>
+            </div>
+            <pre className="bg-zinc-950 text-emerald-400 p-4 rounded-md overflow-x-auto text-[11px] font-mono max-h-96 overflow-y-auto">
+              {JSON.stringify(latestSuccessJson, null, 2)}
+            </pre>
+          </div>
+        )}
 
         {/* Saved Products List */}
         <div className="rounded-lg border border-zinc-200 bg-white shadow-sm overflow-hidden">
