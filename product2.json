@@ -1,405 +1,227 @@
 {
-    "ok": true,
-    "provider": "sage-connect",
-    "requestSummary": {
-        "sageEnvironment": "production",
-        "serviceId": 108,
-        "apiVer": 130,
-        "sageNum": 53869,
-        "productId": 9481227,
-        "productCount": 1
+    "id": "RiSYdQe6miIphVJjRiOO",
+    "cartonH": "0",
+    "complianceList": "",
+    "secondImprintArea": [
+        {
+            "units": 0,
+            "val": "",
+            "type": 0
+        },
+        {
+            "units": 0,
+            "val": "",
+            "type": 0
+        }
+    ],
+    "assembledInCountry": "CN",
+    "suppId": 53869,
+    "secondImprintLoc": "",
+    "isNewProd": 0,
+    "description": "Your event experience with our Stadium-Approved Clear PVC Fanny Pack, now featuring sleek screen print branding solutions. Enjoy stylish organization with two zippered pockets for your essentials. It's not just about compliance; it's about showcasing your unique style and promoting your brand with a touch of personalized elegance. Get ready to stand out and stay secure at all your favorite events. Let your brand shine and make a lasting impression, Order Now! 12.6\" W x 6.7\" H x 6.3\" D",
+    "colors": "Clear, Black, Neon Pink, Neon Blue, Neon Orange, Neon Green",
+    "sizes": [
+        {
+            "units": 1,
+            "val": "12.6",
+            "type": 2
+        },
+        {
+            "type": 3,
+            "units": 1,
+            "val": "6.7"
+        },
+        {
+            "val": "6.3",
+            "units": 1,
+            "type": 4
+        }
+    ],
+    "madeInCountry": "CN",
+    "decoratedInCountry": "CN",
+    "officiallyLicensed": 0,
+    "cat2Id": 0,
+    "piecePrices": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "imprintArea": [
+        {
+            "val": "",
+            "units": 0,
+            "type": 0
+        },
+        {
+            "units": 0,
+            "val": "",
+            "type": 0
+        }
+    ],
+    "priceIncludesSide": "",
+    "notSuitable": 0,
+    "shipPointZip": "",
+    "quoteUponRequest": 0,
+    "prodTimeLo": 7,
+    "prCode": "RRRRRR",
+    "weightPerCtn": "0",
+    "warningLbl": "",
+    "shipPointCountry": "",
+    "decorationMethod": "Screen printed",
+    "options": [],
+    "notPictured": 0,
+    "complianceMemo": "",
+    "verified": 0,
+    "discontinued": 0,
+    "name": "Neon Translucent Color Fanny Packs",
+    "priceIncludesLoc": "",
+    "noDecoration": 0,
+    "rushProdTimeLo": 3,
+    "isClothing": 0,
+    "showEndUsers": 1,
+    "quantities": [
+        25,
+        50,
+        100,
+        250,
+        500,
+        1000
+    ],
+    "keywords": "Clear Fanny Pack, Fanny, Fanny Bag, Fanny Belt, Fanny Packs Bags, Fanny Pack Purse, Fanny Pack Waist Bags, Fanny Pouch, Fanny Pack, Fanny-Pack, Fashion Bags, Fashion Fanny Packs, Outdoor, Sport",
+    "productId": 9502118,
+    "catYear": 2026,
+    "rushProdTimeHi": 5,
+    "cartonL": "0",
+    "uploadedBy": "xbcnun022@gmail.com",
+    "prodTimeHi": 10,
+    "imprintLoc": "",
+    "uploadedAt": "2026-07-22T09:08:10.516Z",
+    "isEnvironmentallyFriendly": 0,
+    "packaging": "Individually wrapped; 100 units/ctn; 30 lbs./ctn;",
+    "inventoryLastUpdated": "",
+    "additionalCharges": {
+        "setupChgCode": "V",
+        "setupChg": 48,
+        "addClrChg": 0,
+        "dieChgCode": "",
+        "dieChg": 0,
+        "plateChg": 0,
+        "screenChg": 0,
+        "repeatChg": 48,
+        "screenChgCode": "",
+        "toolingChg": 0,
+        "toolingChgCode": "",
+        "addClrRunChgs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "repeatChgCode": "V",
+        "plateChgCode": "",
+        "addClrRunChgCode": "",
+        "addClrChgCode": ""
     },
-    "result": {
-        "errNum": null,
-        "errMsg": "",
-        "products": [
-            {
-                "productId": 9481227,
-                "suppId": 53869,
-                "itemNum": "505073",
-                "name": "Adjustable Smartphone Armband",
-                "cat1Id": 8,
-                "cat1Name": "Armbands",
-                "cat2Id": 0,
-                "cat2Name": "",
-                "page1": "",
-                "page2": "",
-                "description": "The Adjustable Smartphone Armband Bag is perfect for fitness enthusiasts and outdoor activities, featuring a spacious design for standard-sized smartphones and essentials like keys and cash. Available in vibrant colors such as Orange, Gray, Red, Green, and Blue, this trendy accessory is ideal for themes like running, cycling, and fishing. Screen printed with your brand's logo, this versatile bag makes an excellent promotional giveaway, with a quick production time of 7 to 10 working days or a rush option of 5 to 7 days.",
-                "keywords": "Portable Phone Bag, Outdoor Sport Bag, Running Arm Bag, Multi-Function Bag, Outdoor Hiking Shoulder Bag, Waterproof Bag, Cycling Bag, Running Bag, Phone Bag, Sports Bag",
-                "colors": "Orange, Gray, Red, Green, Blue",
-                "themes": "Fishing, Fitness, Running, Sports, Walking",
-                "sizes": [
-                    {
-                        "val": "2.95",
-                        "units": 1,
-                        "type": 2
-                    },
-                    {
-                        "val": "5.7",
-                        "units": 1,
-                        "type": 2
-                    },
-                    {
-                        "val": "",
-                        "units": 0,
-                        "type": 0
-                    }
-                ],
-                "quantities": [
-                    100,
-                    250,
-                    500,
-                    1000,
-                    2500,
-                    5000
-                ],
-                "prices": [
-                    7.7,
-                    7.2,
-                    7.04,
-                    6.97,
-                    6.77,
-                    6.57
-                ],
-                "prCode": "PPPPPP",
-                "piecesPerUnit": [
-                    1,
-                    1,
-                    1,
-                    1,
-                    1,
-                    1
-                ],
-                "piecePrices": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "quoteUponRequest": 0,
-                "priceIncludesClr": "",
-                "priceIncludesSide": "",
-                "priceIncludesLoc": "",
-                "options": [],
-                "additionalCharges": {
-                    "setupChg": 48,
-                    "setupChgCode": "V",
-                    "screenChg": 0,
-                    "screenChgCode": "",
-                    "plateChg": 0,
-                    "plateChgCode": "",
-                    "dieChg": 0,
-                    "dieChgCode": "",
-                    "toolingChg": 0,
-                    "toolingChgCode": "",
-                    "repeatChg": 48,
-                    "repeatChgCode": "V",
-                    "addClrChg": 0,
-                    "addClrChgCode": "",
-                    "addClrRunChgs": [
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    "addClrRunChgCode": ""
-                },
-                "isRecyclable": 0,
-                "isEnvironmentallyFriendly": 0,
-                "isNewProd": 0,
-                "showEndUsers": 1,
-                "exclusive": 0,
-                "premium": 0,
-                "notSuitable": 0,
-                "isFood": 0,
-                "isClothing": 0,
-                "hazardous": 0,
-                "officiallyLicensed": 0,
-                "imprintArea": [
-                    {
-                        "val": "",
-                        "units": 0,
-                        "type": 0
-                    },
-                    {
-                        "val": "",
-                        "units": 0,
-                        "type": 0
-                    }
-                ],
-                "imprintLoc": "",
-                "secondImprintArea": [
-                    {
-                        "val": "",
-                        "units": 0,
-                        "type": 0
-                    },
-                    {
-                        "val": "",
-                        "units": 0,
-                        "type": 0
-                    }
-                ],
-                "secondImprintLoc": "",
-                "decorationMethod": "Screen printed",
-                "noDecoration": 0,
-                "noDecorationOffered": 0,
-                "pics": [
-                    {
-                        "index": 1,
-                        "caption": "",
-                        "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=959481227&RS=1800&I=1",
-                        "hasLogo": 1
-                    },
-                    {
-                        "index": 2,
-                        "caption": "",
-                        "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=959481227&RS=1800&I=2",
-                        "hasLogo": 0
-                    },
-                    {
-                        "index": 4,
-                        "caption": "Back",
-                        "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=959481227&RS=1800&I=4",
-                        "hasLogo": 0
-                    },
-                    {
-                        "index": 5,
-                        "caption": "Angle",
-                        "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=959481227&RS=1800&I=5",
-                        "hasLogo": 0
-                    }
-                ],
-                "notPictured": 0,
-                "madeInCountry": "CN",
-                "assembledInCountry": "CN",
-                "decoratedInCountry": "US",
-                "printOnDemand": 0,
-                "complianceList": "",
-                "warningLbl": "",
-                "complianceMemo": "",
-                "prodTimeLo": 7,
-                "prodTimeHi": 10,
-                "rushProdTimeLo": 5,
-                "rushProdTimeHi": 7,
-                "packaging": "1pcs/poly bag; 100 units/ctn; 20 lbs./ctn; Dimensi",
-                "cartonL": "0",
-                "cartonW": "0",
-                "cartonH": "0",
-                "weightPerCtn": "0",
-                "unitsPerCtn": "0",
-                "shipPointCountry": "",
-                "shipPointZip": "",
-                "comment": "",
-                "supplierWebpage": "",
-                "verified": 1,
-                "catYear": 2026,
-                "expirationDate": "2026-12-31",
-                "lastUpdated": "2026-07-16T17:47:29Z",
-                "inventoryOnHand": "",
-                "inventoryLastUpdated": "",
-                "discontinued": 0
-            }
-        ]
-    },
-    "raw": {
-        "ok": true,
-        "products": [
-            {
-                "productId": 9481227,
-                "suppId": 53869,
-                "itemNum": "505073",
-                "name": "Adjustable Smartphone Armband",
-                "cat1Id": 8,
-                "cat1Name": "Armbands",
-                "cat2Id": 0,
-                "cat2Name": "",
-                "page1": "",
-                "page2": "",
-                "description": "The Adjustable Smartphone Armband Bag is perfect for fitness enthusiasts and outdoor activities, featuring a spacious design for standard-sized smartphones and essentials like keys and cash. Available in vibrant colors such as Orange, Gray, Red, Green, and Blue, this trendy accessory is ideal for themes like running, cycling, and fishing. Screen printed with your brand's logo, this versatile bag makes an excellent promotional giveaway, with a quick production time of 7 to 10 working days or a rush option of 5 to 7 days.",
-                "keywords": "Portable Phone Bag, Outdoor Sport Bag, Running Arm Bag, Multi-Function Bag, Outdoor Hiking Shoulder Bag, Waterproof Bag, Cycling Bag, Running Bag, Phone Bag, Sports Bag",
-                "colors": "Orange, Gray, Red, Green, Blue",
-                "themes": "Fishing, Fitness, Running, Sports, Walking",
-                "sizes": [
-                    {
-                        "val": "2.95",
-                        "units": 1,
-                        "type": 2
-                    },
-                    {
-                        "val": "5.7",
-                        "units": 1,
-                        "type": 2
-                    },
-                    {
-                        "val": "",
-                        "units": 0,
-                        "type": 0
-                    }
-                ],
-                "quantities": [
-                    100,
-                    250,
-                    500,
-                    1000,
-                    2500,
-                    5000
-                ],
-                "prices": [
-                    7.7,
-                    7.2,
-                    7.04,
-                    6.97,
-                    6.77,
-                    6.57
-                ],
-                "prCode": "PPPPPP",
-                "piecesPerUnit": [
-                    1,
-                    1,
-                    1,
-                    1,
-                    1,
-                    1
-                ],
-                "piecePrices": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "quoteUponRequest": 0,
-                "priceIncludesClr": "",
-                "priceIncludesSide": "",
-                "priceIncludesLoc": "",
-                "options": [],
-                "additionalCharges": {
-                    "setupChg": 48,
-                    "setupChgCode": "V",
-                    "screenChg": 0,
-                    "screenChgCode": "",
-                    "plateChg": 0,
-                    "plateChgCode": "",
-                    "dieChg": 0,
-                    "dieChgCode": "",
-                    "toolingChg": 0,
-                    "toolingChgCode": "",
-                    "repeatChg": 48,
-                    "repeatChgCode": "V",
-                    "addClrChg": 0,
-                    "addClrChgCode": "",
-                    "addClrRunChgs": [
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    "addClrRunChgCode": ""
-                },
-                "isRecyclable": 0,
-                "isEnvironmentallyFriendly": 0,
-                "isNewProd": 0,
-                "showEndUsers": 1,
-                "exclusive": 0,
-                "premium": 0,
-                "notSuitable": 0,
-                "isFood": 0,
-                "isClothing": 0,
-                "hazardous": 0,
-                "officiallyLicensed": 0,
-                "imprintArea": [
-                    {
-                        "val": "",
-                        "units": 0,
-                        "type": 0
-                    },
-                    {
-                        "val": "",
-                        "units": 0,
-                        "type": 0
-                    }
-                ],
-                "imprintLoc": "",
-                "secondImprintArea": [
-                    {
-                        "val": "",
-                        "units": 0,
-                        "type": 0
-                    },
-                    {
-                        "val": "",
-                        "units": 0,
-                        "type": 0
-                    }
-                ],
-                "secondImprintLoc": "",
-                "decorationMethod": "Screen printed",
-                "noDecoration": 0,
-                "noDecorationOffered": 0,
-                "pics": [
-                    {
-                        "index": 1,
-                        "caption": "",
-                        "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=959481227&RS=1800&I=1",
-                        "hasLogo": 1
-                    },
-                    {
-                        "index": 2,
-                        "caption": "",
-                        "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=959481227&RS=1800&I=2",
-                        "hasLogo": 0
-                    },
-                    {
-                        "index": 4,
-                        "caption": "Back",
-                        "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=959481227&RS=1800&I=4",
-                        "hasLogo": 0
-                    },
-                    {
-                        "index": 5,
-                        "caption": "Angle",
-                        "url": "https://www.promoplace.com/ws/ws.dll/QPic?SN=53869&P=959481227&RS=1800&I=5",
-                        "hasLogo": 0
-                    }
-                ],
-                "notPictured": 0,
-                "madeInCountry": "CN",
-                "assembledInCountry": "CN",
-                "decoratedInCountry": "US",
-                "printOnDemand": 0,
-                "complianceList": "",
-                "warningLbl": "",
-                "complianceMemo": "",
-                "prodTimeLo": 7,
-                "prodTimeHi": 10,
-                "rushProdTimeLo": 5,
-                "rushProdTimeHi": 7,
-                "packaging": "1pcs/poly bag; 100 units/ctn; 20 lbs./ctn; Dimensi",
-                "cartonL": "0",
-                "cartonW": "0",
-                "cartonH": "0",
-                "weightPerCtn": "0",
-                "unitsPerCtn": "0",
-                "shipPointCountry": "",
-                "shipPointZip": "",
-                "comment": "",
-                "supplierWebpage": "",
-                "verified": 1,
-                "catYear": 2026,
-                "expirationDate": "2026-12-31",
-                "lastUpdated": "2026-07-16T17:47:29Z",
-                "inventoryOnHand": "",
-                "inventoryLastUpdated": "",
-                "discontinued": 0
-            }
-        ]
-    }
+    "expirationDate": "2026-12-31",
+    "itemNum": "600388",
+    "exclusive": 0,
+    "uploadedByName": "Sk Saif",
+    "cat1Id": 360,
+    "noDecorationOffered": 0,
+    "page2": "",
+    "priceIncludesClr": "",
+    "cat1Name": "Fanny Packs",
+    "isFood": 0,
+    "piecesPerUnit": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+    ],
+    "premium": 0,
+    "page1": "",
+    "cartonW": "0",
+    "themes": "Beach, Biking, Camping, Fashion, Vacation",
+    "supplierWebpage": "",
+    "hazardous": 0,
+    "inventoryOnHand": "",
+    "pics": [
+        {
+            "index": 1,
+            "url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/1.jpg",
+            "caption": "",
+            "hasLogo": 1,
+            "sage_url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/1.jpg"
+        },
+        {
+            "hasLogo": 0,
+            "url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/2.jpg",
+            "caption": "",
+            "index": 2,
+            "sage_url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/2.jpg"
+        },
+        {
+            "url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/3.jpg",
+            "caption": "Image 3",
+            "hasLogo": 0,
+            "index": 3,
+            "sage_url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/3.jpg"
+        },
+        {
+            "index": 4,
+            "hasLogo": 0,
+            "url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/4.jpg",
+            "caption": "Image 4",
+            "sage_url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/4.jpg"
+        },
+        {
+            "index": 5,
+            "hasLogo": 0,
+            "url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/5.jpg",
+            "caption": "Image 5",
+            "sage_url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/5.jpg"
+        },
+        {
+            "hasLogo": 0,
+            "caption": "Image 6",
+            "url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/6.jpg",
+            "index": 6,
+            "sage_url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/6.jpg"
+        },
+        {
+            "caption": "Image 7",
+            "url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/7.jpg",
+            "hasLogo": 0,
+            "index": 7,
+            "sage_url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/7.jpg"
+        },
+        {
+            "hasLogo": 0,
+            "url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/8.jpg",
+            "caption": "Image 8",
+            "index": 8,
+            "sage_url": "https://storage.googleapis.com/mavenpromo-da684.firebasestorage.app/sage_products/images/9502118/8.jpg"
+        }
+    ],
+    "unitsPerCtn": "0",
+    "comment": "",
+    "printOnDemand": 0,
+    "isRecyclable": 0,
+    "cat2Name": "",
+    "prices": [
+        12.77,
+        10.9,
+        9.32,
+        8.46,
+        8,
+        7.72
+    ],
+    "lastUpdated": "2026-07-16T17:47:35Z"
 }

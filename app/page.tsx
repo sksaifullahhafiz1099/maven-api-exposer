@@ -21,7 +21,7 @@ const ADMIN_URL = process.env.NODE_ENV === 'production'
   ? 'https://admin.mavenpromo.com'
   : 'http://localhost:3000';
 
-const SAGE_API_URL = `https://admin.mavenpromo.com/api/external/sage-products`;
+const SAGE_API_URL = `http://localhost:3100/api/external/sage-products`;
 
 // ─── Main Component ──────────────────────────────────────────────────────────
 
